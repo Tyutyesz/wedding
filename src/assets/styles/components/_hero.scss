@@ -1,0 +1,18 @@
+.hero{
+  width:100vw;
+  height:calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $white-color url('../images/hero_1.jpg') no-repeat center;
+  background-size:cover;
+  color:$white-color;
+  h1, h3{
+    font-family: $header-font;
+    line-height: 1.2;
+  }
+  h3{
+    margin-top:1.5rem;
+  }
+}

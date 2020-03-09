@@ -1,18 +1,14 @@
-@import 'abstracts/_mixins'; 
-@import 'abstracts/_variables'; 
+@import 'abstracts/_mixins';
+@import 'abstracts/_variables';
 
-@import 'base/_fonts'; 
-@import 'base/_reset'; 
-@import 'base/_typography'; 
+@import 'base/_fonts';
+@import 'base/_reset';
+@import 'base/_typography';
+@import 'base/base';
 
-@import 'components/_buttons'; 
+@import 'components/hero';
 
-@import 'layout/_header'; 
-@import 'layout/_footer'; 
-@import 'layout/_navigation'; 
-
-@import 'pages/_home'; 
-
-@import 'themes/_theme'; 
+@import 'layout/navigation';
+@import 'layout/main';
 
 

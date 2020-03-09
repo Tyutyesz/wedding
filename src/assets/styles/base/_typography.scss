@@ -1,0 +1,56 @@
+body{
+  color:$primary-color;
+  font-family: $base-font;
+  font-size:$base-font-size;
+}
+h1{
+  font-size:4rem;
+  font-family: inherit;
+  color:inherit;
+}
+h2{
+  font-size:3rem;
+  font-family: inherit;
+  color:inherit;
+}
+h3{
+  font-size:2rem;
+  font-family: inherit;
+  color:inherit;
+}
+a{
+  position: relative;
+  top:0;
+  text-decoration: none;
+  transition: top .3s linear;
+  &:after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:3px;
+    background:$primary-color;
+    transform-origin: left;
+    transition: width 0.3s linear, bottom 0.3s linear;
+  }
+  &:hover{
+    text-decoration: none;
+  }
+
+  @media (hover: hover) {
+    &:hover{
+      top: -3px;
+      color:inherit;
+      &:after{
+        width:100%;
+        bottom:-3px
+      }
+    }
+  }
+}
+a, p, span{
+  font-size:1rem;
+  font-family: $base-font;
+  color:inherit;
+}
