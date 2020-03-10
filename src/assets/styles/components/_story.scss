@@ -1,0 +1,37 @@
+.story{
+  min-height:100vh;
+  color: $primary-color;
+
+  h2, h3{
+    font-family: $header-font;
+    font-weight:bold;
+  }
+  .mobiles{
+    position: relative;
+  }
+  .pattern{
+    position: absolute;
+    width:1px;
+    height:100%;
+    top:0;
+    left: calc(50% - 1px);
+    border-right: dashed 3px $primary-color;
+  }
+
+  .item-left--first{
+    background:transparent url('../images/Bruce_Willis_1.jpg') no-repeat center;
+    background-size:cover;
+  }
+  .item-right--first{
+    background:transparent url('../images/cameron_diaz.jpg') no-repeat center;
+    background-size:cover;
+  }
+  .item-left--second{
+    background:transparent url('../images/INTRO_BradleyCooper.jpg') no-repeat center;
+    background-size:cover;
+  }
+  .item-right--second{
+    background:transparent url('../images/68712_annehathaway.jpg') no-repeat center;
+    background-size:cover;
+  }
+}

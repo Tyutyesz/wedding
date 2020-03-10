@@ -1,0 +1,28 @@
+
+.mobile{
+  position: relative;
+  width:200px;
+  height:355.555px;
+  margin: 0 auto;
+  background:red;
+  border-radius: 30px;
+  overflow: hidden;
+  .bg{
+    width:102%;
+    height:102%;
+    position: absolute;
+    top:-1%;
+    left:-1%;
+    z-index:2
+  }
+  .item{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    padding:10px;
+    transform-origin: bottom center;
+  }
+}
