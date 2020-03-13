@@ -1,0 +1,19 @@
+.tinder-icon{
+  width:30px;
+  height:30px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:rgba($white-color, 0.2);
+  img{
+    width:30px;
+    height:30px;
+  }
+}
+.tinder-icon--no{
+  border: 2px solid #FF5864;
+}
+.tinder-icon--yes{
+  border: 2px solid #48e4b2;
+}
