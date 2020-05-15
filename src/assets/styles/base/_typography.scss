@@ -1,56 +1,82 @@
-body{
-  color:$primary-color;
-  font-family: $base-font;
-  font-size:$base-font-size;
-}
-h1{
-  font-size:4rem;
-  font-family: inherit;
-  color:inherit;
-}
-h2{
-  font-size:3rem;
-  font-family: inherit;
-  color:inherit;
-}
-h3{
-  font-size:2rem;
-  font-family: inherit;
-  color:inherit;
-}
-a{
-  position: relative;
-  top:0;
-  text-decoration: none;
-  transition: top .3s linear;
-  &:after{
-    content: '';
-    position: absolute;
-    bottom:0;
-    left:0;
-    width:0;
-    height:3px;
-    background:$primary-color;
-    transform-origin: left;
-    transition: width 0.3s linear, bottom 0.3s linear;
-  }
-  &:hover{
-    text-decoration: none;
-  }
+@mixin font($font-family: '$base-font', $font-size: 20px, $line-size: 28px, $color: $atmospheric-anthracite-100) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: ($line-size/$font-size) + 0.00001; //HACK: chrome is flooring the resulting line-height in px (23.9999px => 23px, etc.)
+  color: $color;
+};
 
-  @media (hover: hover) {
-    &:hover{
-      top: -3px;
-      color:inherit;
-      &:after{
-        width:100%;
-        bottom:-3px
-      }
-    }
-  }
+@mixin font-regular-11-16($color: $secondary-color) {
+  @include font($base-font, 11px, 16px, $color);
 }
-a, p, span{
-  font-size:1rem;
-  font-family: $base-font;
-  color:inherit;
+@mixin font-regular-15-20($color: $secondary-color) {
+  @include font($base-font, 15px, 20px, $color);
+}
+@mixin font-regular-17-23($color: $secondary-color) {
+  @include font($base-font, 17px, 23px, $color);
+}
+@mixin font-regular-19-28($color: $secondary-color) {
+  @include font($base-font, 19px, 28px, $color);
+}
+@mixin font-regular-21-30($color: $secondary-color) {
+  @include font($base-font, 21px, 30px, $color);
+}
+@mixin font-regular-30-40($color: $secondary-color) {
+  @include font($base-font, 30px, 40px, $color);
+}
+@mixin font-regular-33-45($color: $secondary-color) {
+  @include font($base-font, 33px, 45px, $color);
+}
+@mixin font-regular-72-90($color: $secondary-color) {
+  @include font($base-font, 72px, 45px, $color);
+}
+
+@mixin font-bold-11-16($color: $secondary-color) {
+  @include font($bold-font, 11px, 16px, $color);
+}
+@mixin font-bold-15-20($color: $secondary-color) {
+  @include font($bold-font, 15px, 20px, $color);
+}
+@mixin font-bold-17-23($color: $secondary-color) {
+  @include font($bold-font, 17px, 23px, $color);
+}
+@mixin font-bold-19-28($color: $secondary-color) {
+  @include font($bold-font, 19px, 28px, $color);
+}
+@mixin font-bold-21-30($color: $secondary-color) {
+  @include font($bold-font, 21px, 30px, $color);
+}
+@mixin font-bold-30-40($color: $secondary-color) {
+  @include font($bold-font, 30px, 40px, $color);
+}
+@mixin font-bold-33-45($color: $secondary-color) {
+  @include font($bold-font, 33px, 45px, $color);
+}
+@mixin font-bold-72-90($color: $secondary-color) {
+  @include font($bold-font, 72px, 45px, $color);
+}
+
+
+@mixin font-hand-11-16($color: $secondary-color) {
+  @include font($header-font, 11px, 16px, $color);
+}
+@mixin font-hand-15-20($color: $secondary-color) {
+  @include font($header-font, 15px, 20px, $color);
+}
+@mixin font-hand-17-23($color: $secondary-color) {
+  @include font($header-font, 17px, 23px, $color);
+}
+@mixin font-hand-19-28($color: $secondary-color) {
+  @include font($header-font, 19px, 28px, $color);
+}
+@mixin font-hand-21-30($color: $secondary-color) {
+  @include font($header-font, 21px, 30px, $color);
+}
+@mixin font-hand-30-40($color: $secondary-color) {
+  @include font($header-font, 30px, 40px, $color);
+}
+@mixin font-hand-33-45($color: $secondary-color) {
+  @include font($header-font, 33px, 45px, $color);
+}
+@mixin font-hand-72-90($color: $secondary-color) {
+  @include font($header-font, 72px, 45px, $color);
 }

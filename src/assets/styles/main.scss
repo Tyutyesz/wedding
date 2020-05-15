@@ -1,17 +1,8 @@
-@import 'abstracts/_mixins';
-@import 'abstracts/_variables';
-
-@import 'base/_fonts';
-@import 'base/_reset';
-@import 'base/_typography';
-@import 'base/base';
-
-@import 'components/icons';
-@import 'components/hero';
-@import 'components/story';
-@import 'components/mobile';
-
-@import 'layout/navigation';
-@import 'layout/main';
-
+@import "abstracts/abstracts";
+@import "base/baseStyles";
+@import "components/components";
+@import "layout/layout";
+@import "pages/pages";
+@import "themes/themes";
+@import "vendors/vendors";
 
