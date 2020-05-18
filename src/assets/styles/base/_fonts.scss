@@ -24,3 +24,13 @@
   url('../fonts/Muli-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
   font-weight: bold;
 }
+
+@font-face {
+  font-family: 'Parisienne-Regular';
+  src: url('../fonts/Parisienne-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Parisienne-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/Parisienne-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../fonts/Parisienne-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/Parisienne-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-weight: bold;
+}

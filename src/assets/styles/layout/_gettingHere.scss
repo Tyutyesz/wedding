@@ -1,0 +1,18 @@
+.getting-here{
+  width:100%;
+  min-height:100vh;
+  background:$white-color url("../images/black-road-2790391.jpg") no-repeat center;
+  background-size: cover;
+  color:$white-color;
+  display: flex;
+  align-items: center;
+  .header{
+    color:$white-color;
+  }
+  p{
+    @include font-bold-21-30($white-color);
+  }
+  .button{
+    margin-top: 40px;
+  }
+}

@@ -57,26 +57,54 @@
 
 
 @mixin font-hand-11-16($color: $secondary-color) {
-  @include font($header-font, 11px, 16px, $color);
+  @include font($hand-font, 11px, 16px, $color);
 }
 @mixin font-hand-15-20($color: $secondary-color) {
-  @include font($header-font, 15px, 20px, $color);
+  @include font($hand-font, 15px, 20px, $color);
 }
 @mixin font-hand-17-23($color: $secondary-color) {
-  @include font($header-font, 17px, 23px, $color);
+  @include font($hand-font, 17px, 23px, $color);
 }
 @mixin font-hand-19-28($color: $secondary-color) {
-  @include font($header-font, 19px, 28px, $color);
+  @include font($hand-font, 19px, 28px, $color);
 }
 @mixin font-hand-21-30($color: $secondary-color) {
-  @include font($header-font, 21px, 30px, $color);
+  @include font($hand-font, 21px, 30px, $color);
 }
 @mixin font-hand-30-40($color: $secondary-color) {
-  @include font($header-font, 30px, 40px, $color);
+  @include font($hand-font, 30px, 40px, $color);
 }
 @mixin font-hand-33-45($color: $secondary-color) {
-  @include font($header-font, 33px, 45px, $color);
+  @include font($hand-font, 33px, 45px, $color);
 }
 @mixin font-hand-72-90($color: $secondary-color) {
+  @include font($hand-font, 72px, 90px, $color);
+}
+@mixin font-hand-90-120($color: $secondary-color) {
+  @include font($hand-font, 90px, 120px, $color);
+}
+
+@mixin font-header-11-16($color: $secondary-color) {
+  @include font($header-font, 11px, 16px, $color);
+}
+@mixin font-header-15-20($color: $secondary-color) {
+  @include font($header-font, 15px, 20px, $color);
+}
+@mixin font-header-17-23($color: $secondary-color) {
+  @include font($header-font, 17px, 23px, $color);
+}
+@mixin font-header-19-28($color: $secondary-color) {
+  @include font($header-font, 19px, 28px, $color);
+}
+@mixin font-header-21-30($color: $secondary-color) {
+  @include font($header-font, 21px, 30px, $color);
+}
+@mixin font-header-30-40($color: $secondary-color) {
+  @include font($header-font, 30px, 40px, $color);
+}
+@mixin font-header-33-45($color: $secondary-color) {
+  @include font($header-font, 33px, 45px, $color);
+}
+@mixin font-header-72-90($color: $secondary-color) {
   @include font($header-font, 72px, 45px, $color);
 }
