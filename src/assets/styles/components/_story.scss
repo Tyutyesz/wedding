@@ -1,0 +1,105 @@
+.story{
+  position: relative;
+  width:100%;
+  height: 100vh;
+  overflow: hidden;
+  .header{
+    margin-top:40px;
+  }
+}
+.story__item{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  background: $white-color no-repeat center;
+  background-size: cover;
+  padding-top:40px;
+  top:100%;
+  opacity:0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &--1{
+    background-image: url("../images/stock1.jpg");
+    z-index: 1;
+    top:40%;
+  }
+  &--2{
+    background-image: url("../images/stock2.jpg");
+    z-index: 2;
+  }
+  &--3{
+    background-image: url("../images/stock3.jpg");
+    z-index: 3;
+  }
+  &--4{
+    background-image: url("../images/stock1.jpg");
+    z-index: 4;
+  }
+  &--5{
+    background-image: url("../images/stock2.jpg");
+    z-index: 5;
+  }
+  h3{
+    text-align: center;
+    @include font-hand-33-45($white-color);
+    opacity:0;
+    margin-bottom:50px;
+  }
+  p{
+    @include font-bold-21-30($white-color);
+    opacity:0;
+  }
+}
+.story__navigation{
+  position: absolute;
+  z-index:2;
+  right:20px;
+  top:30px;
+  text-align: center;
+  a{
+    position: relative;
+    display: inline-block;
+    width:30px;
+    height:30px;
+    margin-bottom:20px;
+    transition:all 0.3s ease-out;
+    transform-origin: center;
+    span{
+      position: absolute;
+      top:0;
+      left:0;
+      width:30px;
+      height:30px;
+      display: inline-block;
+      @include font-header-17-23($white-color);
+      line-height: 1;
+      font-weight: bolder;
+      background-color: $primary-color;
+      border-radius: 50%;
+      z-index:2;
+    }
+    &:after{
+      content:'';
+      position: absolute;
+      z-index:-1;
+      top:30px;
+      left:15px;
+      width:2px;
+      height:35px;
+      background:$primary-color;
+      display: block;
+      transform-origin: center;
+      transform: translateX(-50%);
+    }
+    &:hover{
+      text-decoration: none;
+      transform: scale(1.3);
+    }
+  }
+  li:last-of-type{
+    a:after{
+      display: none;
+    }
+  }
+}
