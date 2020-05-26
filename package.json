@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Tyutyesz/highway_demo/issues"
   },
-  "homepage": "https://github.com/Tyutyesz/highway_demo#readme",
+  "homepage": "https://Tyutyesz.github.io/wedding",
   "dependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
@@ -54,5 +54,8 @@
     "webpack-merge": "^4.2.1",
     "autoprefixer": "^9.7.0",
     "postcss-loader": "^3.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
