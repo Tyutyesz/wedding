@@ -40,4 +40,4 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /dev/node_modules/
 /dev/package-lock.json
 /dist/
-
+dist/
