@@ -31,17 +31,14 @@ const Core = {
             $story2Wrapper = document.getElementById('story-2'),
             $story3Wrapper = document.getElementById('story-3'),
             $story4Wrapper = document.getElementById('story-4'),
-            $story5Wrapper = document.getElementById('story-5'),
             $story1Header = $story1Wrapper.querySelector('h3'),
             $story2Header = $story2Wrapper.querySelector('h3'),
             $story3Header = $story3Wrapper.querySelector('h3'),
             $story4Header = $story4Wrapper.querySelector('h3'),
-            $story5Header = $story5Wrapper.querySelector('h3'),
             $story1Paragraph = $story1Wrapper.querySelector('p'),
             $story2Paragraph = $story2Wrapper.querySelector('p'),
             $story3Paragraph = $story3Wrapper.querySelector('p'),
-            $story4Paragraph = $story4Wrapper.querySelector('p'),
-            $story5Paragraph = $story5Wrapper.querySelector('p');
+            $story4Paragraph = $story4Wrapper.querySelector('p');
         const time = 0;
         const speed = 1.5;
         let tween = new TimelineMax();
@@ -61,10 +58,6 @@ const Core = {
         tween.to($story4Wrapper, speed, { opacity: 1, top: 0, ease: 'power4.out' }, 10.5);
         tween.to($story4Header, speed, { opacity: 1, top: 0, ease: 'none' }, 11);
         tween.to($story4Paragraph, speed, { opacity: 1, top: 0, ease: 'none' }, 11.5);
-
-        tween.to($story5Wrapper, speed, { opacity: 1, top: 0, ease: 'power4.out' }, 14);
-        tween.to($story5Header, speed, { opacity: 1, top: 0, ease: 'none' }, 14.5);
-        tween.to($story5Paragraph, speed, { opacity: 1, top: 0, ease: 'none' }, 15);
 
         let scene = new ScrollMagic.Scene({
             triggerElement: '#story',
