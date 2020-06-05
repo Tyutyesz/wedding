@@ -1,5 +1,5 @@
 .wedding{
-  padding-top:50px;
+  padding-top:$nav-height;
   padding-bottom:50px;
   min-height:100vh;
   width:100%;
@@ -34,75 +34,89 @@
   }
 }
 .wedding__program{
-  display: flex;
-  align-items: stretch;
-  flex-wrap: wrap;
-  /*li{
-    width: 320px;
-    background:Red;
+  width:420px;
+  margin:20px auto;
+  li{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    &:first-of-type img{
+      //height:80px; width:auto;
+    }
   }
   img{
-    height:90px;
-    width:auto;
-    order:0;
+    width:80px;
+    min-width: 80px;
+    height:auto;
     display: inline-block;
+    margin-right:40px;
   }
   p{
-    display: inline-block;
-    margin-top: 15px;
-    @include font-regular-17-23($secondary-color);
-    order:1;
+    text-align: left;
+    margin:0;
   }
-  @media screen and (max-width:991px) and (min-width:767px) {
-    img{
-      height:90px;
-    }
+  li:before{
+    content:'';
+    display: block;
+    position: absolute;
+    width:12px;
+    height:12px;
+    background:$secondary-color;
+    border-radius: 6px;
+    left: 90px;
   }
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-    img{
-      order:1;
-      margin-bottom:30px;
+  li:not(:last-of-type):after{
+    content:'';
+    display: block;
+    position: absolute;
+    width:2px;
+    height:calc(100% + 20px);
+    background:$secondary-color;
+    border-radius: 5px;
+    left: 95px;
+    top:0;
+  }
+  li:first-of-type:after{
+    top:50%;
+  }
+  li:last-of-type:after{
+    content:'';
+    display: block;
+    position: absolute;
+    width:2px;
+    height:calc(100% + 20px);
+    background:$secondary-color;
+    border-radius: 5px;
+    left: 95px;
+    bottom:50%;
+  }
+  @media screen and (max-width:576px) {
+    width:100%;
+    .min-width{
+      min-width: 80px;
     }
     p{
-      order:0;
-      margin:0 0 5px;
+      @include font-bold-17-23($secondary-color);
     }
-  }*/
+  }
 }
 .wedding__card{
   border:1px solid $grey-color;
-  width:calc(33% - 10px);
+  /*width:calc(33% - 10px);*/
   margin-bottom:20px;
   padding:1rem;
   transition: all 0.3s linear;
   box-shadow: 0 0 0 #dedede;
-  img{
+  height:100%;
+  text-align: center;
+  /*img{
     height:80px;
     width:auto;
-  }
+  }*/
   &:hover{
     box-shadow:0 0 15px #dedede;
-  }
-  @media screen and (min-width:768px) {
-    &:nth-of-type(3n+1):not(.wedding__card--lead){
-      margin-right: 20px;
-    }
-    &:nth-of-type(3n+3){
-      margin-left: 20px;
-    }
-  }
-  @media screen and (min-width:576px) and (max-width:767px) {
-    width:calc(50% - 10px);
-    &:nth-of-type(even){
-      margin-left:20px;
-    }
-  }
-  @media screen and (max-width:575px) {
-    width:100%;
-    /*&:nth-of-type(even){
-      margin-left:20px;
-    }*/
   }
   &--lead{
     margin:20px auto;

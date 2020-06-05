@@ -1,0 +1,6 @@
+.contact{
+  padding-bottom:40px;
+  h3{
+    @include font-bold-21-30($secondary-color);
+  }
+}

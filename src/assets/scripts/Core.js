@@ -9,7 +9,7 @@ const Controller = new ScrollMagic.Controller();
 const Core = {
     init() {
         this.navigations();
-        //this.story();
+        this.story();
     },
     navigations() {
         const $header = document.querySelector('header');
