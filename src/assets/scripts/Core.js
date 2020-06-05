@@ -8,22 +8,37 @@ const Controller = new ScrollMagic.Controller();
 
 const Core = {
     init() {
-        //this.navigations();
+        this.navigations();
         this.story();
     },
     navigations() {
-        const $btn = document.querySelector('.mobile-btn');
-        const $menu = document.querySelector('.menu');
-        let opened = false;
-        const toggleNav = () => {
-            if (!opened) {
-                $menu.classList.add('opened');
+        const $header = document.querySelector('header');
+        const $content = document.querySelector('main');
+        const wWidth = window.innerWidth;
+        const $hamburger = document.getElementById('hamburger');
+        const $links = $header.querySelectorAll('a');
+        let bounds = $content.getBoundingClientRect();
+
+        const watchScroll = () => {
+            bounds = $content.getBoundingClientRect();
+            if (bounds.y < -20) {
+                $header.classList.add('scrolled');
             } else {
-                $menu.classList.remove('opened');
+                $header.classList.remove('scrolled');
             }
-            opened = !opened;
         };
-        $btn.addEventListener('click', toggleNav);
+        watchScroll();
+        window.addEventListener('scroll', watchScroll);
+
+        const closeMenu = () => {
+            $hamburger.checked = false;
+        };
+
+        if (wWidth < 768) {
+            $links.forEach((element) => {
+                element.addEventListener('click', closeMenu);
+            });
+        }
     },
     story() {
         /* scrollspy pen: https://codepen.io/zchee/pen/ogzvZZ */

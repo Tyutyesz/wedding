@@ -13,6 +13,21 @@
     margin-top:40px;
     @include font-bold-19-28($secondary-color)
   }
+  @media screen and (max-width: 767px){
+    /*align-items: flex-start;
+    padding-top:80px;*/
+    h1{
+      @include font-hand-33-45($secondary-color);
+      line-height: 1.1;
+    }
+    p{
+      margin-top:40px;
+      @include font-bold-19-28($secondary-color);
+      span{
+        display: none;
+      }
+    }
+  }
 }
 .hero__image{
   position: absolute;
@@ -32,5 +47,15 @@
     right: calc(60vh + 10px);
     transform: rotate(90deg) translate(100%, -100%);
     transform-origin: 100% 0;
+  }
+  @media screen and (max-width:767px) {
+    height:40vh;
+    line-height: 40vh;
+    &--bottom{
+      bottom: 10px;
+      left: calc(40vh + 10px);
+      transform: rotate(-90deg);
+      transform-origin: 0 100%;
+    }
   }
 }
