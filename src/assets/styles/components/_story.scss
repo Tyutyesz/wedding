@@ -23,9 +23,6 @@
     position: relative;
     z-index:10;
   }
-  h3{
-    @include font-hand-72-90($white-color);
-  }
   &:after{
     content: '';
     display: block;
@@ -68,6 +65,14 @@
     @include font-bold-33-45($white-color);
     opacity:0;
     text-align: center;
+  }
+  @media screen and (max-width:767px) {
+    h3{
+      @include font-hand-33-45($white-color);
+    }
+    p{
+      @include font-bold-21-30($white-color);
+    }
   }
 }
 

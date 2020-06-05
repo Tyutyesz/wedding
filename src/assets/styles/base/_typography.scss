@@ -77,6 +77,9 @@
 @mixin font-hand-33-45($color: $secondary-color) {
   @include font($hand-font, 33px, 45px, $color);
 }
+@mixin font-hand-45-55($color: $secondary-color) {
+  @include font($hand-font, 45px, 55px, $color);
+}
 @mixin font-hand-72-90($color: $secondary-color) {
   @include font($hand-font, 72px, 90px, $color);
 }

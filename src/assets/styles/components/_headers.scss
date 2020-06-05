@@ -3,8 +3,8 @@
   position: relative;
   padding: 0 30px;
   text-align: center;
-  @include font-bold-33-45($secondary-color);
-  text-transform: uppercase;
+  @include font-hand-45-55($secondary-color);
+  /*text-transform: uppercase;*/
   margin-bottom:50px;
   &:before{
     content:'';

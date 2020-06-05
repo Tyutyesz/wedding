@@ -1,13 +1,15 @@
 .wedding{
   padding-top:50px;
+  padding-bottom:50px;
   min-height:100vh;
   width:100%;
   background:$white-color;
   color:$secondary-color;
   h2{
     text-align: center;
-    @include font-bold-33-45($secondary-color);
-    text-transform: uppercase;
+    @include font-hand-45-55($secondary-color);
+    font-weight: bolder;
+    /*text-transform: uppercase;*/
     margin-bottom:50px;
   }
   h3{
@@ -23,5 +25,44 @@
   p{
     @include font-bold-21-30($secondary-color);
     margin-bottom: 20px;
+  }
+}
+.wedding__program{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  li{
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  img{
+    height:90px;
+    width:auto;
+    order:0;
+    display: inline-block;
+  }
+  p{
+    display: inline-block;
+    margin-top: 15px;
+    @include font-regular-17-23($secondary-color);
+    order:1;
+  }
+  @media screen and (max-width:991px) and (min-width:767px) {
+    img{
+      height:90px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    img{
+      order:1;
+      margin-bottom:30px;
+    }
+    p{
+      order:0;
+      margin:0 0 5px;
+    }
   }
 }
