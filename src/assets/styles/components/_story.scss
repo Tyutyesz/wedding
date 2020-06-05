@@ -46,6 +46,9 @@
   &--3{
     background-image: url("../images/yes.jpg");
     z-index: 3;
+    @media screen and (max-width: 767px) {
+      background-position-x:66%;
+    }
   }
   &--4{
     background-image: url("../images/rings.jpg");
