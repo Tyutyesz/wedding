@@ -54,10 +54,15 @@ const Core = {
             $story2Paragraph = $story2Wrapper.querySelector('p'),
             $story3Paragraph = $story3Wrapper.querySelector('p'),
             $story4Paragraph = $story4Wrapper.querySelector('p');
-        const time = 0;
         const speed = 1.5;
-        let tween = new TimelineMax();
-
+        const wWidth = window.innerWidth;
+        const tween = new TimelineMax();
+        let duration = 0;
+        if (wWidth > 992) {
+            duration = 4000;
+        } else {
+            duration = 1000;
+        }
         tween.to($story1Wrapper, speed, { opacity: 1, top: 0, ease: 'power4.out' }, 0);
         tween.to($story1Header, speed, { opacity: 1, top: 0, ease: 'none' }, 0.5);
         tween.to($story1Paragraph, speed, { opacity: 1, top: 0, ease: 'none' }, 1);
@@ -76,8 +81,8 @@ const Core = {
 
         let scene = new ScrollMagic.Scene({
             triggerElement: '#story',
-            duration: 4000,
-            triggerHook:0,
+            duration,
+            triggerHook: 0,
         })
             .setPin('#story')
             .setTween(tween)

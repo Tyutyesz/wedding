@@ -5,6 +5,7 @@
   url('../fonts/CormorantGaramond-Regular.woff') format('woff'), /* Pretty Modern Browsers */
   url('../fonts/CormorantGaramond-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
   url('../fonts/CormorantGaramond-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-display: fallback;
 }
 @font-face {
   font-family: 'Muli-Regular';
@@ -14,6 +15,7 @@
   url('../fonts/Muli-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
   url('../fonts/Muli-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
   font-weight:normal;
+  font-display: fallback;
 }
 @font-face {
   font-family: 'Muli-Bold';
@@ -23,6 +25,7 @@
   url('../fonts/Muli-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
   url('../fonts/Muli-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
   font-weight: bold;
+  font-display: fallback;
 }
 
 @font-face {
@@ -33,4 +36,5 @@
   url('../fonts/Parisienne-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
   url('../fonts/Parisienne-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
   font-weight: bold;
+  font-display: fallback;
 }
